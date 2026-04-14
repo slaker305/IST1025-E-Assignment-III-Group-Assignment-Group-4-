@@ -1,0 +1,81 @@
+#NUMBER 1
+import random
+computer=random.randint(0,2)
+user=input("Enter S , K , or P: ").upper()
+if computer==0:
+comp_choice="S"
+elif computer==1:
+comp_choice="K"
+else:
+comp_choice="P"
+print("Computer Chose: ",comp_choice)
+if user==comp_choice:
+ print("No one wins")
+elif (user=="S" and comp_choice=="K")or\
+(user=="K" and comp_choice=="P")or\
+(user=="P" and comp_choice=="S"):
+ print("You Win")
+else:
+ print("Computer wins")
+
+
+
+#NUMBER 2
+def convert(fahrenheit):
+celcius=(5/9)*(fahrenheit-32)
+return celcius
+f=float(input("Enter the temperature in Fahrenheit: "))
+c=convert(f)
+print("Temperature in celcius: ", c)
+if c > 20:
+ print("IT'S HOT HERE")
+else:
+ print("ITS'S COLD HERE")
+
+
+
+#NUMBER 3
+def weeklyTempAnalyzer():
+ print("Enter temperatures for the 7 days of the week:")
+temperatures = []
+for i in range(7):
+temp = float(input(f"Day {i+1} temperature: "))
+temperatures.append(temp)
+lowest_temp = min(temperatures)
+highest_temp = max(temperatures)
+total_temp = sum(temperatures)
+ average_temp = total_temp / len(temperatures)
+ print("\n--- Report of Weekly Temperature ---")
+ print(f"Temperatures entered: {temperatures}") print(f"Lowest Temperature : {lowest_temp:.2f}")
+ print(f"Highest Temperature: {highest_temp:.2f}")
+ print(f"Sum of Temperatures: {total_temp:.2f}")
+ print(f"Average Temperature: {average_temp:.2f}")
+#Run the program
+weeklyTempAnalyzer()
+
+
+
+#NUMBER 4
+def salesReportGenerator():
+salesmen_data = []
+ grand_total = 0
+num_salesmen = 10
+num_items = 5
+for s in range(num_salesmen):
+name = input(f"Enter name of salesman {s+1}: ")
+sales = []
+for i in range(num_items):
+value = int(input(f" Enter sales for Item{i+1}: "))
+sales.append(value)
+total_sales = sum(sales)
+grand_total += total_sales
+salesmen_data.append((name, sales, total_sales))
+ print("\n--- Sales Report ---")
+header = "Name".ljust(10) + "".join([f"Item{i+1}".ljust(8) for i in range(num_items)]) + "TotalSales" print(header)
+ print("-" * len(header))
+for name, sales, total in salesmen_data:
+row = name.ljust(10) + "".join([str(x).ljust(8) for x in sales]) + str(total)
+print(row)
+ print("-" * len(header))
+ print(f"GrandTotal: {grand_total}")
+salesReportGenerator()
