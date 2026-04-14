@@ -64,7 +64,7 @@ weeklyTempAnalyzer()
 
 
 
-#NUMBER 4
+# NUMBER 4
 def salesReportGenerator():
     salesmen_data = []
     grand_total = 0
@@ -84,7 +84,7 @@ def salesReportGenerator():
         grand_total += total_sales
         salesmen_data.append((name, sales, total_sales))
 
-    # Step 2: Display results in table format
+    #Step 2: Display results in table format
   
  print("\n--- Sales Report ---")
     header = "Name".ljust(10) + "".join([f"Item{i+1}".ljust(8) for i in range(num_items)]) + "TotalSales"
@@ -97,6 +97,6 @@ def salesReportGenerator():
 
     print("-" * len(header))
     print(f"GrandTotal: {grand_total}")
-# Run the program
+#Run the program
 salesReportGenerator()
 
