@@ -27,10 +27,9 @@ else:
 
 
 #NUMBER 2
-def convert(fahrenheit):
+def convert(fahrenheit)
     celcius=(5/9)*(fahrenheit-32)
     return celcius
-
 f=float(input("Enter the temperature in Fahrenheit: "))
 c=convert(f)
 print("Temperature in celcius: ", c)
