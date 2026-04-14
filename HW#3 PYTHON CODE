@@ -1,6 +1,5 @@
 #NUMBER 1
 import random
-
 computer=random.randint(0,2)
 user=input("Enter S , K , or P: ").upper()
 if computer==0:
