@@ -2,6 +2,7 @@
 import random
 computer=random.randint(0,2)
 user=input("Enter S , K , or P: ").upper()
+
 if computer==0:
     comp_choice="S"
 elif computer==1:
@@ -12,12 +13,16 @@ print("Computer Chose: ",comp_choice)
 
 if user==comp_choice:
     print("No one wins")
-elif (user=="S" and comp_choice=="K")or\ 
-(user=="K" and comp_choice=="P")or\
-(user=="P" and comp_choice=="S"):
+
+elif (user=="S" and comp_choice=="K")or\
+     (user=="K" and comp_choice=="P")or\
+     (user=="P" and comp_choice=="S"):
     print("You Win")
+
 else:
     print("Computer wins")
+
+
 
 
 
