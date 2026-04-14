@@ -87,7 +87,7 @@ def salesReportGenerator():
     #Step 2: Display results in table format
   
  print("\n--- Sales Report ---")
-    header = "Name".ljust(10) + "".join([f"Item{i+1}".ljust(8) for i in range(num_items)]) + "TotalSales"
+    header = "Name".ljust(15) + "".join([f"Item{i+1}".ljust(10) for i in range(num_items)]) + "TotalSales"
     print(header)
     print("-" * len(header))
 
