@@ -47,7 +47,7 @@ def weeklyTempAnalyzer():
     for i in range(7):
         temp = float(input(f"Day {i+1} temperature: "))
         temperatures.append(temp)
-        lowest_temp = min(temperatures)
+        lowest_temp= min(temperatures)
         highest_temp = max(temperatures)
         total_temp = sum(temperatures)
         average_temp = total_temp / len(temperatures)
